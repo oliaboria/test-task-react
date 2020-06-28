@@ -3,10 +3,12 @@
         "browser": true,
         "es2020": true
     },
-    "plugins": ["prettier"],
+    "plugins": ["import", "prettier"],
     "extends": [
         "airbnb-base",
         "plugin:react/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
         "plugin:prettier/recommended"
     ],
     "parserOptions": {
@@ -47,6 +49,12 @@
         "react": {
             "pragma": "React",
             "version": "detect"
+        },
+        "import/resolver": {
+            "node": {
+                "paths": ["src"],
+                "extensions": [".js", ".jsx"]
+            }
         }
     }
 }
