@@ -5,3 +5,5 @@
 .stylelintrc
 .stylelintignore
 yarn.lock
+/public
+/src/*.svg
