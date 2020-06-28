@@ -26,7 +26,7 @@ Runs eslint for css and scss
 
 ### `yarn format`
 
-Format your code with prettier
+Formats your code with prettier
 
 ### `yarn test`
 
