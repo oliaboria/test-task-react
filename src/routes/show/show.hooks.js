@@ -14,7 +14,7 @@ const useAsyncShow = () => {
 
     useEffect(() => {
         dispatch(getShowById(id));
-    }, [id]);
+    }, [id, dispatch]);
 
     return { show, isShowLoading };
 };

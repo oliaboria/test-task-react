@@ -19,7 +19,7 @@ const useAsyncEpisodes = () => {
 
     useEffect(() => {
         dispatch(getEpisodesByShowId(id));
-    }, [id]);
+    }, [id, dispatch]);
 
     return { episodes, seasonsNumber, isEpisodesLoading };
 };

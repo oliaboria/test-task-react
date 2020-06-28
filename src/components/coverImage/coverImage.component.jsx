@@ -8,7 +8,7 @@ const CoverImage = ({ img, medium }) => {
 
     return (
         <figure>
-            <img src={imgUrl} alt="Cover Image" />
+            <img src={imgUrl} alt="Cover" />
         </figure>
     );
 };

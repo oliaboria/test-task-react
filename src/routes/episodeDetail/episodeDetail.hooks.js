@@ -17,7 +17,7 @@ const useAsyncEpisodeDetail = () => {
 
     useEffect(() => {
         dispatch(getEpisodeDetailById(id));
-    }, [id]);
+    }, [id, dispatch]);
 
     return { episode, isEpisodeLoading };
 };

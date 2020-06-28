@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { DATE_FORMAT } from '../../../../constants';
+import { DATE_FORMAT, ROUTES_PATH } from '../../../../constants';
 import episodeType from '../../../../types/episode.type';
 
 function Episode({ episode, showId }) {
@@ -16,7 +16,7 @@ function Episode({ episode, showId }) {
             <td>
                 <Link
                     to={{
-                        pathname: `/shows/${showId}/episodebynumber`,
+                        pathname: `${ROUTES_PATH.show}/${showId}${ROUTES_PATH.episode}`,
                         search: `?season=${season}&number=${number}`,
                     }}
                     className="episode-link">
