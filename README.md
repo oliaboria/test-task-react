@@ -1,5 +1,8 @@
+# Test Task React
+
 This project was bootstrapped with
-[Create React App](https://github.com/facebook/create-react-app).
+[Create React App](https://github.com/facebook/create-react-app). Powered by
+eslint, prettier and pre-commit hooks
 
 ## Available Scripts
 
@@ -12,6 +15,18 @@ Runs the app in the development mode.<br /> Open
 
 The page will reload if you make edits.<br /> You will also see any lint errors
 in the console.
+
+### `yarn lint`
+
+Runs eslint for js
+
+### `yarn lint:style`
+
+Runs eslint for css and scss
+
+### `yarn format`
+
+Format your code with prettier
 
 ### `yarn test`
 
