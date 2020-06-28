@@ -6,6 +6,7 @@ import getEpisodeDetailById from './episodeDetail.actions';
 import {
     selectIsEpisodeDetailLoading,
     selectEpisodeDetail,
+    selectIsEpisodeDetailLoadingFail,
 } from './episodeDetail.selectors';
 
 const useAsyncEpisodeDetail = () => {
@@ -14,12 +15,13 @@ const useAsyncEpisodeDetail = () => {
 
     const episode = useSelector(selectEpisodeDetail);
     const isEpisodeLoading = useSelector(selectIsEpisodeDetailLoading);
+    const isError = useSelector(selectIsEpisodeDetailLoadingFail);
 
     useEffect(() => {
         dispatch(getEpisodeDetailById(id));
     }, [id, dispatch]);
 
-    return { episode, isEpisodeLoading };
+    return { episode, isEpisodeLoading, isError };
 };
 
 export default useAsyncEpisodeDetail;

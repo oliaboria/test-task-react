@@ -8,7 +8,7 @@ import {
 
 export const loadEpisodeDetailAction = (episodeId) => ({
     type: LOAD_EPISODE_DETAIL,
-    payload: { episodeId, isLoading: true },
+    payload: { episodeId, isLoading: true, isError: false },
 });
 
 export const loadEpisodeDetailSuccessAction = (episode) => ({
@@ -18,7 +18,7 @@ export const loadEpisodeDetailSuccessAction = (episode) => ({
 
 export const loadEpisodeDetailFailAction = (error) => ({
     type: LOAD_EPISODE_DETAIL_FAIL,
-    payload: { error, isLoading: false },
+    payload: { error, isLoading: false, isError: true },
 });
 
 const getEpisodeDetailById = (episodeId) => async (dispatch) => {
