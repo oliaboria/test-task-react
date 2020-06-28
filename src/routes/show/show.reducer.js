@@ -8,6 +8,7 @@ const initialState = {
     id: null,
     show: null,
     isLoading: false,
+    isError: false,
 };
 
 function showReducer(state = initialState, action) {

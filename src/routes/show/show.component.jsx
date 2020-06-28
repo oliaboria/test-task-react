@@ -5,17 +5,20 @@ import './_show.scss';
 import Card from '../../components/card';
 import Episodes from '../../components/episodes';
 import useAsyncEpisodes from '../../components/episodes/episodes.hooks';
+import Error from '../../components/error';
 import Loader from '../../components/loader';
 
 import useAsyncShow from './show.hooks';
 
 const Show = () => {
-    const { show, isShowLoading } = useAsyncShow();
+    const { show, isShowLoading, isShowFail } = useAsyncShow();
     const { episodes, isEpisodesLoading, seasonsNumber } = useAsyncEpisodes();
 
     return (
         <>
             {(isShowLoading || isEpisodesLoading) && <Loader />}
+
+            {!isShowLoading && isShowFail && <Error />}
 
             {!isShowLoading && show ? (
                 <div className="show">
@@ -23,7 +26,7 @@ const Show = () => {
                 </div>
             ) : null}
 
-            {!isEpisodesLoading && seasonsNumber > 0 ? (
+            {!isEpisodesLoading && show && seasonsNumber > 0 ? (
                 <Episodes
                     episodes={episodes}
                     seasonsNumber={seasonsNumber}
