@@ -9,7 +9,7 @@ const CoverImage = ({ img, medium }) => {
     const imgUrl = medium ? img.medium : img.original;
 
     return (
-        <figure className="cover-image">
+        <figure className="cover-image left-column">
             <img src={imgUrl} alt="Cover" />
         </figure>
     );

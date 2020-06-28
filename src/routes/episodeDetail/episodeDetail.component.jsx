@@ -1,9 +1,9 @@
 import React from 'react';
 
-import CoverImage from '../../components/coverImage';
-import Description from '../../components/description';
+import './_episodeDetail.scss';
+
+import Card from '../../components/card';
 import Loader from '../../components/loader';
-import Title from '../../components/title';
 
 import useAsyncEpisodeDetail from './episodeDetail.hooks';
 
@@ -15,11 +15,9 @@ const EpisodeDetail = () => {
             {isEpisodeLoading && <Loader />}
 
             {!isEpisodeLoading && episode ? (
-                <>
-                    <Title text={episode.name} />
-                    <CoverImage img={episode.image} />
-                    <Description text={episode.summary} />
-                </>
+                <div className="episode-detail">
+                    <Card card={episode} />
+                </div>
             ) : null}
         </>
     );

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import CoverImage from '../../components/coverImage';
-import Description from '../../components/description';
+import './_show.scss';
+
+import Card from '../../components/card';
 import Episodes from '../../components/episodes';
 import useAsyncEpisodes from '../../components/episodes/episodes.hooks';
 import Loader from '../../components/loader';
-import Title from '../../components/title';
 
 import useAsyncShow from './show.hooks';
 
@@ -18,11 +18,9 @@ const Show = () => {
             {(isShowLoading || isEpisodesLoading) && <Loader />}
 
             {!isShowLoading && show ? (
-                <>
-                    <Title text={show.name} />
-                    <CoverImage img={show.image} medium />
-                    <Description text={show.summary} />
-                </>
+                <div className="show">
+                    <Card card={show} />
+                </div>
             ) : null}
 
             {!isEpisodesLoading && seasonsNumber > 0 ? (
