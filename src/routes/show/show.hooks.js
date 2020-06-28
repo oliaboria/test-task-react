@@ -3,20 +3,20 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
 import getShowById from './show.actions';
-import { isShowLoading, selectShow } from './show.selectors';
+import { selectIsShowLoading, selectShow } from './show.selectors';
 
 const useAsyncShow = () => {
     const { id } = useParams();
     const dispatch = useDispatch();
 
     const show = useSelector(selectShow);
-    const isLoading = useSelector(isShowLoading);
+    const isShowLoading = useSelector(selectIsShowLoading);
 
     useEffect(() => {
         dispatch(getShowById(id));
     }, [id]);
 
-    return { show, isLoading };
+    return { show, isShowLoading };
 };
 
 export default useAsyncShow;

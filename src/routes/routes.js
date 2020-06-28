@@ -6,10 +6,8 @@ import {
     Switch,
 } from 'react-router-dom';
 
-import { DEFAULT_SHOW_ID } from '../constants';
-
 import EpisodeDetail from './episodeDetail';
-import { ROUTES, ROUTES_PATH } from './routes.constants';
+import { ROUTES, DEFAULT_ROUTE } from './routes.constants';
 import Show from './show';
 
 const ROUTES_MAP = [
@@ -24,8 +22,6 @@ const ROUTES_MAP = [
 ];
 
 const AppRouter = () => {
-    const defaultRoute = `${ROUTES_PATH.show}/${DEFAULT_SHOW_ID}`;
-
     return (
         <Router>
             <Switch>
@@ -37,7 +33,7 @@ const AppRouter = () => {
                         component={route.component}
                     />
                 ))}
-                <Redirect from="*" to={defaultRoute} />
+                <Redirect from="*" to={DEFAULT_ROUTE} />
             </Switch>
         </Router>
     );
