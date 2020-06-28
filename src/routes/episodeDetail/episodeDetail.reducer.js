@@ -8,6 +8,7 @@ const initialState = {
     episodeId: null,
     episode: null,
     isLoading: false,
+    isError: false,
 };
 
 function episodeDetailReducer(state = initialState, action) {

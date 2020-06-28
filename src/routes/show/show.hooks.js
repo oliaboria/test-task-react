@@ -6,7 +6,7 @@ import getShowById from './show.actions';
 import {
     selectIsShowLoading,
     selectShow,
-    selectIsShowFail,
+    selectIsShowLoadingFail,
 } from './show.selectors';
 
 const useAsyncShow = () => {
@@ -15,13 +15,13 @@ const useAsyncShow = () => {
 
     const show = useSelector(selectShow);
     const isShowLoading = useSelector(selectIsShowLoading);
-    const isShowFail = useSelector(selectIsShowFail);
+    const isShowLoadingFail = useSelector(selectIsShowLoadingFail);
 
     useEffect(() => {
         dispatch(getShowById(id));
     }, [id, dispatch]);
 
-    return { show, isShowLoading, isShowFail };
+    return { show, isShowLoading, isShowLoadingFail };
 };
 
 export default useAsyncShow;

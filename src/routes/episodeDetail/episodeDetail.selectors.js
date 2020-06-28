@@ -5,3 +5,6 @@ export const selectEpisodeDetail = (state) =>
 
 export const selectIsEpisodeDetailLoading = (state) =>
     selectEpisodeDetailState(state).isLoading;
+
+export const selectIsEpisodeDetailLoadingFail = (state) =>
+    selectEpisodeDetailState(state).isError;

@@ -11,14 +11,14 @@ import Loader from '../../components/loader';
 import useAsyncShow from './show.hooks';
 
 const Show = () => {
-    const { show, isShowLoading, isShowFail } = useAsyncShow();
+    const { show, isShowLoading, isShowLoadingFail } = useAsyncShow();
     const { episodes, isEpisodesLoading, seasonsNumber } = useAsyncEpisodes();
 
     return (
         <>
             {(isShowLoading || isEpisodesLoading) && <Loader />}
 
-            {!isShowLoading && isShowFail && <Error />}
+            {!isShowLoading && isShowLoadingFail && <Error />}
 
             {!isShowLoading && show ? (
                 <div className="show">
