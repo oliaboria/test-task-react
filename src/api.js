@@ -22,3 +22,13 @@ export const fetchEpisodeList = async (showId) => {
         throw new Error(error);
     }
 };
+
+export const fetchEpisodeById = async (episodeId) => {
+    try {
+        const episode = await request(`${API_EPISODES_PATH}/${episodeId}`);
+
+        return episode;
+    } catch (error) {
+        throw new Error(error);
+    }
+};
