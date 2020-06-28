@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Description = ({ text }) => <p>{text}</p>;
+const Description = ({ text }) => (
+    <div dangerouslySetInnerHTML={{ __html: text }} />
+);
 
 Description.propTypes = {
     text: PropTypes.string.isRequired,
