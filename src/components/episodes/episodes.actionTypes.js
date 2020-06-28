@@ -1,0 +1,3 @@
+export const LOAD_EPISODES = 'show@LOAD_EPISODES';
+export const LOAD_EPISODES_SUCCESS = 'show@LOAD_EPISODES_SUCCESS';
+export const LOAD_EPISODES_FAIL = 'show@LOAD_EPISODES_FAIL';

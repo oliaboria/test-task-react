@@ -2,14 +2,27 @@ import React from 'react';
 
 import CoverImage from '../../components/coverImage';
 import Description from '../../components/description';
+import Loader from '../../components/loader';
 import Title from '../../components/title';
 
-const EpisodeDetail = () => (
-    <>
-        <Title />
-        <CoverImage />
-        <Description />
-    </>
-);
+import useAsyncEpisodeDetail from './episodeDetail.hooks';
+
+const EpisodeDetail = () => {
+    const { episode, isEpisodeLoading } = useAsyncEpisodeDetail();
+
+    return (
+        <>
+            {isEpisodeLoading && <Loader />}
+
+            {!isEpisodeLoading && episode ? (
+                <>
+                    <Title text={episode.name} />
+                    <CoverImage img={episode.image} medium />
+                    <Description text={episode.summary} />
+                </>
+            ) : null}
+        </>
+    );
+};
 
 export default EpisodeDetail;

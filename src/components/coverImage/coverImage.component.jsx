@@ -1,20 +1,32 @@
-import PropTypes from 'prop-types';
+import { bool, string, shape } from 'prop-types';
 import React from 'react';
 
 import noImg from './no-img.png';
 
-const CoverImage = ({ img }) => (
-    <figure>
-        <img src={img} alt="Cover Image" />
-    </figure>
-);
+const CoverImage = ({ img, medium }) => {
+    const imgUrl = medium ? img.medium : img.original;
+
+    return (
+        <figure>
+            <img src={imgUrl} alt="Cover" />
+        </figure>
+    );
+};
 
 CoverImage.propTypes = {
-    img: PropTypes.string,
+    img: shape({
+        medium: string,
+        original: string,
+    }).isRequired,
+    medium: bool,
 };
 
 CoverImage.defaultProps = {
-    img: noImg,
+    img: {
+        medium: noImg,
+        original: noImg,
+    },
+    medium: false,
 };
 
 export default CoverImage;
