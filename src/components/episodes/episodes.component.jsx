@@ -1,6 +1,8 @@
 import { shape, number, arrayOf } from 'prop-types';
 import React from 'react';
 
+import './_episodes.scss';
+
 import episodeType from '../../types/episode.type';
 
 import EpisodeList from './episodeList';
@@ -14,8 +16,12 @@ const Episodes = ({ episodes, seasonsNumber, showId }) => {
                     const numberOfSeason = index + 1;
 
                     return (
-                        <section key={`season-${numberOfSeason}`}>
-                            <h3>Season {numberOfSeason}</h3>
+                        <section
+                            key={`season-${numberOfSeason}`}
+                            className="episodes">
+                            <h3 className="episodes-title">
+                                Season {numberOfSeason}
+                            </h3>
                             <EpisodeList
                                 episodes={episodes[numberOfSeason]}
                                 showId={showId}

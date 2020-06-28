@@ -1,0 +1,29 @@
+@import '../../../assets/style/color';
+@import '../../../assets/style/mixins';
+
+.episodes-list {
+    margin-bottom: 15px;
+
+    td,
+    th {
+        padding: 5px;
+        text-align: center;
+        vertical-align: middle;
+
+        @include desktop {
+            min-width: 200px;
+            padding: 10px;
+        }
+    }
+
+    &-head {
+        color: $white;
+        background-color: $green;
+    }
+
+    &-body {
+        tr:nth-child(even) {
+            background-color: $grey;
+        }
+    }
+}

@@ -1,21 +1,23 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import './_episodeList.scss';
+
 import episodeType from '../../../types/episode.type';
 
 import Episode from './episode';
 
 const EpisodeList = ({ episodes, showId }) => {
     return (
-        <table className="episodes">
-            <thead className="episodes-head">
+        <table className="episodes-list">
+            <thead className="episodes-list-head">
                 <tr>
                     <th>Number</th>
                     <th>Date</th>
                     <th>Name</th>
                 </tr>
             </thead>
-            <tbody className="episodes-body">
+            <tbody className="episodes-list-body">
                 {episodes.map((episode) => {
                     return (
                         <Episode

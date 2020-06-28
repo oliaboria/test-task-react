@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import './_episode.scss';
+
 import { DATE_FORMAT, ROUTES_PATH } from '../../../../constants';
 import episodeType from '../../../../types/episode.type';
 
-function Episode({ episode, showId }) {
+const Episode = ({ episode, showId }) => {
     const { number, airdate, name, season } = episode;
 
     return (
@@ -25,7 +27,7 @@ function Episode({ episode, showId }) {
             </td>
         </tr>
     );
-}
+};
 
 Episode.propTypes = {
     episode: episodeType.isRequired,

@@ -1,8 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import './_description.scss';
+
 const Description = ({ text }) => (
-    <div dangerouslySetInnerHTML={{ __html: text }} />
+    <div
+        dangerouslySetInnerHTML={{ __html: text }}
+        className="description right-column"
+    />
 );
 
 Description.propTypes = {
