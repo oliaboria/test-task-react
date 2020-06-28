@@ -1,0 +1,11 @@
+@mixin h1-heading {
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 44px;
+}
+
+@mixin h3-heading {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+}

@@ -1,0 +1,12 @@
+@import './assets/style/mixins';
+@import './assets/style/variables';
+
+.app-container {
+    padding: 0 $container-padding;
+
+    @include desktop {
+        max-width: 1210px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
