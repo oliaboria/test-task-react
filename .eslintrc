@@ -3,7 +3,12 @@
         "browser": true,
         "es2020": true
     },
-    "extends": ["airbnb-base", "plugin:react/recommended"],
+    "plugins": ["prettier"],
+    "extends": [
+        "airbnb-base",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended"
+    ],
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -35,7 +40,8 @@
                 }
             }
         ],
-        "react/jsx-boolean-value": ["error", "never"]
+        "react/jsx-boolean-value": ["error", "never"],
+        "prettier/prettier": ["error"]
     },
     "settings": {
         "react": {

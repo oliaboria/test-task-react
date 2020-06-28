@@ -1,0 +1,7 @@
+.prettierignore
+.DS_Store
+.editorconfig
+.gitignore
+.stylelintrc
+.stylelintignore
+yarn.lock
