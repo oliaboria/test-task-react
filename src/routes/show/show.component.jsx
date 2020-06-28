@@ -1,5 +1,11 @@
 import React from 'react';
 
-const Show = () => <div>Show</div>;
+import Title from '../../components/title';
+
+const Show = () => (
+    <>
+        <Title />
+    </>
+);
 
 export default Show;

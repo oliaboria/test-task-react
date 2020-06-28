@@ -1,5 +1,11 @@
 import React from 'react';
 
-const EpisodeDetail = () => <div>EpisodeDetail</div>;
+import Title from '../../components/title';
+
+const EpisodeDetail = () => (
+    <>
+        <Title />
+    </>
+);
 
 export default EpisodeDetail;
