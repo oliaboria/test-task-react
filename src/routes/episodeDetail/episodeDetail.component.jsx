@@ -17,7 +17,7 @@ const EpisodeDetail = () => {
             {!isEpisodeLoading && episode ? (
                 <>
                     <Title text={episode.name} />
-                    <CoverImage img={episode.image} medium />
+                    <CoverImage img={episode.image} />
                     <Description text={episode.summary} />
                 </>
             ) : null}

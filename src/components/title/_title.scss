@@ -1,0 +1,6 @@
+@import '../../assets/style/typography';
+
+.title {
+    @include h1-heading;
+    margin-bottom: 30px;
+}

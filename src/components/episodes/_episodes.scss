@@ -1,0 +1,9 @@
+@import '../../assets/style/_color';
+@import '../../assets/style/_typography';
+
+.episodes {
+    &-title {
+        @include h3-heading;
+        color: $green;
+    }
+}

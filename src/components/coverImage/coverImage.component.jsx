@@ -1,13 +1,15 @@
 import { bool, string, shape } from 'prop-types';
 import React from 'react';
 
+import './_coverImage.scss';
+
 import noImg from './no-img.png';
 
 const CoverImage = ({ img, medium }) => {
     const imgUrl = medium ? img.medium : img.original;
 
     return (
-        <figure>
+        <figure className="cover-image">
             <img src={imgUrl} alt="Cover" />
         </figure>
     );
