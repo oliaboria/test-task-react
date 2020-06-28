@@ -1,0 +1,52 @@
+{
+    "env": {
+        "browser": true,
+        "es2020": true
+    },
+    "plugins": ["prettier"],
+    "extends": [
+        "airbnb-base",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "rules": {
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "max-len": [
+            "error",
+            120,
+            4,
+            {
+                "ignoreUrls": true,
+                "ignoreComments": false,
+                "ignoreRegExpLiterals": true,
+                "ignoreStrings": true,
+                "ignoreTemplateLiterals": true
+            }
+        ],
+        "import/order": [
+            "error",
+            {
+                "newlines-between": "always",
+                "alphabetize": {
+                    "order": "asc",
+                    "caseInsensitive": true
+                }
+            }
+        ],
+        "react/jsx-boolean-value": ["error", "never"],
+        "prettier/prettier": ["error"]
+    },
+    "settings": {
+        "react": {
+            "pragma": "React",
+            "version": "detect"
+        }
+    }
+}

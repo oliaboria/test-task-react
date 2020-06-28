@@ -1,0 +1,9 @@
+.prettierignore
+.DS_Store
+.editorconfig
+.gitignore
+.stylelintrc
+.stylelintignore
+yarn.lock
+/public
+/src/*.svg
