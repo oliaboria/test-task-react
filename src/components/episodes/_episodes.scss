@@ -4,6 +4,7 @@
 .episodes {
     &-title {
         @include h3-heading;
+        margin-bottom: 10px;
         color: $green;
     }
 }
