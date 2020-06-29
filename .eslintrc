@@ -3,8 +3,9 @@
         "browser": true,
         "es2020": true
     },
-    "plugins": ["import", "prettier"],
+    "plugins": ["jest", "import", "prettier"],
     "extends": [
+        "plugin:jest/recommended",
         "airbnb-base",
         "plugin:react/recommended",
         "plugin:import/errors",

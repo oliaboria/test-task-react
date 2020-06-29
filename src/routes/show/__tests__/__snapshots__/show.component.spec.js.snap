@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Show should render card component 1`] = `
+<Fragment>
+  <div
+    className="show"
+  >
+    <Card
+      card={Object {}}
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`Show should render card with seasons list 1`] = `
+<Fragment>
+  <div
+    className="show"
+  >
+    <Card
+      card={
+        Object {
+          "id": 111,
+        }
+      }
+    />
+  </div>
+  <Episodes
+    episodes={
+      Object {
+        "1": Object {
+          "id": "112",
+          "name": "Pilot",
+          "season": "1",
+        },
+      }
+    }
+    seasonsNumber={1}
+    showId={111}
+  />
+</Fragment>
+`;
