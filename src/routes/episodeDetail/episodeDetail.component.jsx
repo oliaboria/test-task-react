@@ -3,25 +3,33 @@ import React from 'react';
 import './_episodeDetail.scss';
 
 import Card from '../../components/card';
-import Error from '../../components/error';
+import ErrorMessage from '../../components/errorMessage';
 import Loader from '../../components/loader';
 
 import useAsyncEpisodeDetail from './episodeDetail.hooks';
 
 const EpisodeDetail = () => {
-    const { episode, isEpisodeLoading, isError } = useAsyncEpisodeDetail();
+    const {
+        episode,
+        isEpisodeLoading,
+        isEpisodeLoadingFail,
+    } = useAsyncEpisodeDetail();
+
+    const isError = !isEpisodeLoading && isEpisodeLoadingFail;
+
+    console.log(episode);
 
     return (
         <>
             {isEpisodeLoading && <Loader />}
 
-            {!isEpisodeLoading && isError && <Error />}
+            {isError && <ErrorMessage />}
 
-            {!isEpisodeLoading && episode ? (
+            {!isEpisodeLoading && (
                 <div className="episode-detail">
                     <Card card={episode} />
                 </div>
-            ) : null}
+            )}
         </>
     );
 };

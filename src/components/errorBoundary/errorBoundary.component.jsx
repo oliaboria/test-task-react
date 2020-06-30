@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
 import logger from '../../utils/logger';
-import Error from '../error';
+import ErrorMessage from '../errorMessage';
 
 class ErrorBoundary extends PureComponent {
     constructor(props) {
@@ -23,7 +23,7 @@ class ErrorBoundary extends PureComponent {
         const { hasError } = this.state;
         const { children } = this.props;
 
-        return hasError ? <Error /> : children;
+        return hasError ? <ErrorMessage /> : children;
     }
 }
 

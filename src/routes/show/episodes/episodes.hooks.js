@@ -10,7 +10,7 @@ import {
 } from './episodes.selectors';
 
 const useAsyncEpisodes = () => {
-    const { id } = useParams();
+    const { showId } = useParams();
     const dispatch = useDispatch();
 
     const episodes = useSelector(selectEpisodes);
@@ -18,8 +18,8 @@ const useAsyncEpisodes = () => {
     const isEpisodesLoading = useSelector(selectIsEpisodesLoading);
 
     useEffect(() => {
-        dispatch(getEpisodesByShowId(id));
-    }, [id, dispatch]);
+        dispatch(getEpisodesByShowId(showId));
+    }, [showId, dispatch]);
 
     return { episodes, seasonsNumber, isEpisodesLoading };
 };

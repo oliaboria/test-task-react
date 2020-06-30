@@ -9,33 +9,21 @@ import {
 import ErrorBoundary from '../components/errorBoundary';
 
 import EpisodeDetail from './episodeDetail';
-import { ROUTES, DEFAULT_ROUTE } from './routes.constants';
 import Show from './show';
 
-const ROUTES_MAP = [
-    {
-        path: ROUTES.episode,
-        component: EpisodeDetail,
-    },
-    {
-        path: ROUTES.show,
-        component: Show,
-    },
-];
+const DEFAULT_ROUTE = 'shows/6771';
 
 const AppRouter = () => {
     return (
         <Router>
             <ErrorBoundary>
                 <Switch>
-                    {ROUTES_MAP.map((route) => (
-                        <Route
-                            exact
-                            key={route.path}
-                            path={route.path}
-                            component={route.component}
-                        />
-                    ))}
+                    <Route
+                        exact
+                        path="/shows/:showId/episodes/:episodeId"
+                        component={EpisodeDetail}
+                    />
+                    <Route exact path="/shows/:showId" component={Show} />
                     <Redirect from="*" to={DEFAULT_ROUTE} />
                 </Switch>
             </ErrorBoundary>

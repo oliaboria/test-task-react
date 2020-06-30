@@ -3,36 +3,38 @@ import React from 'react';
 import './_show.scss';
 
 import Card from '../../components/card';
-import Episodes from '../../components/episodes';
-import useAsyncEpisodes from '../../components/episodes/episodes.hooks';
-import Error from '../../components/error';
+import ErrorMessage from '../../components/errorMessage';
 import Loader from '../../components/loader';
 
+import Episodes from './episodes';
+import useAsyncEpisodes from './episodes/episodes.hooks';
 import useAsyncShow from './show.hooks';
 
 const Show = () => {
     const { show, isShowLoading, isShowLoadingFail } = useAsyncShow();
     const { episodes, isEpisodesLoading, seasonsNumber } = useAsyncEpisodes();
 
+    const isLoading = isShowLoading || isEpisodesLoading;
+    const isError = !isLoading && isShowLoadingFail;
+
     return (
         <>
-            {(isShowLoading || isEpisodesLoading) && <Loader />}
+            {isLoading && <Loader />}
 
-            {!isShowLoading && isShowLoadingFail && <Error />}
+            {!isLoading && !isError && (
+                <>
+                    <div className="show">
+                        <Card card={show} />
+                    </div>
 
-            {!isShowLoading && show ? (
-                <div className="show">
-                    <Card card={show} />
-                </div>
-            ) : null}
+                    <Episodes
+                        episodes={episodes}
+                        seasonsNumber={seasonsNumber}
+                    />
+                </>
+            )}
 
-            {!isEpisodesLoading && show && seasonsNumber > 0 ? (
-                <Episodes
-                    episodes={episodes}
-                    seasonsNumber={seasonsNumber}
-                    showId={show.id}
-                />
-            ) : null}
+            {isError && <ErrorMessage />}
         </>
     );
 };

@@ -9,7 +9,7 @@ import {
 const initialState = {
     showId: null,
     episodesBySeason: {},
-    seasonsNumber: null,
+    seasonsNumber: 0,
     isLoading: false,
 };
 

@@ -6,7 +6,7 @@ import {
 
 const initialState = {
     episodeId: null,
-    episode: null,
+    episode: {},
     isLoading: false,
     isError: false,
 };

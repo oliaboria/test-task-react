@@ -3,11 +3,10 @@ import React from 'react';
 
 import './_episodeList.scss';
 
-import episodeType from '../../../types/episode.type';
+import episodeType from '../../../../types/episode.type';
+import Episode from '../episode';
 
-import Episode from './episode';
-
-const EpisodeList = ({ episodes, showId }) => {
+const EpisodeList = ({ episodes }) => {
     return (
         <table className="episodes-list">
             <thead className="episodes-list-head">
@@ -19,13 +18,7 @@ const EpisodeList = ({ episodes, showId }) => {
             </thead>
             <tbody className="episodes-list-body">
                 {episodes.map((episode) => {
-                    return (
-                        <Episode
-                            episode={episode}
-                            key={episode.id}
-                            showId={showId}
-                        />
-                    );
+                    return <Episode episode={episode} key={episode.id} />;
                 })}
             </tbody>
         </table>
@@ -34,12 +27,10 @@ const EpisodeList = ({ episodes, showId }) => {
 
 EpisodeList.propTypes = {
     episodes: PropTypes.arrayOf(episodeType).isRequired,
-    showId: PropTypes.number.isRequired,
 };
 
 EpisodeList.defaultProps = {
     episodes: [],
-    showId: null,
 };
 
 export default EpisodeList;

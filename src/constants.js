@@ -5,8 +5,3 @@ export const API_SHOWS_PATH = 'shows';
 export const API_EPISODES_PATH = 'episodes';
 
 export const DATE_FORMAT = 'MMM dd, yyyy';
-
-export const ROUTES_PATH = {
-    episode: '/episodebynumber',
-    show: '/shows',
-};

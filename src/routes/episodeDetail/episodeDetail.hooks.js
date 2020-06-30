@@ -10,18 +10,18 @@ import {
 } from './episodeDetail.selectors';
 
 const useAsyncEpisodeDetail = () => {
-    const { id } = useParams();
+    const { episodeId } = useParams();
     const dispatch = useDispatch();
 
     const episode = useSelector(selectEpisodeDetail);
     const isEpisodeLoading = useSelector(selectIsEpisodeDetailLoading);
-    const isError = useSelector(selectIsEpisodeDetailLoadingFail);
+    const isEpisodeLoadingFail = useSelector(selectIsEpisodeDetailLoadingFail);
 
     useEffect(() => {
-        dispatch(getEpisodeDetailById(id));
-    }, [id, dispatch]);
+        dispatch(getEpisodeDetailById(episodeId));
+    }, [episodeId, dispatch]);
 
-    return { episode, isEpisodeLoading, isError };
+    return { episode, isEpisodeLoading, isEpisodeLoadingFail };
 };
 
 export default useAsyncEpisodeDetail;

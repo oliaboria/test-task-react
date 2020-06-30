@@ -1,34 +1,37 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import CoverImage from './coverImage';
-import Description from './description';
-import Title from './title';
+import noImg from '../../assets/img/no-img.png';
 
-const Card = ({ card }) => (
-    <>
-        <Title text={card.name} />
-        <div className="clearfix">
-            <CoverImage img={card.image} medium />
-            <Description text={card.summary} />
-        </div>
-    </>
-);
+import './_card.scss';
+
+const Card = ({ card }) => {
+    const { name, image, summary } = card;
+    const imgUrl = image ? image.medium : noImg;
+
+    return (
+        <>
+            <h1 className="card-title">{name}</h1>
+
+            <div className="clearfix">
+                <figure className="card-image left-column">
+                    <img src={imgUrl} alt="Cover" />
+                </figure>
+                <div
+                    dangerouslySetInnerHTML={{ __html: summary }}
+                    className="card-description right-column"
+                />
+            </div>
+        </>
+    );
+};
 
 Card.propTypes = {
     card: PropTypes.shape({
         name: PropTypes.string,
-        image: PropTypes.shape({}),
+        image: PropTypes.object,
         summary: PropTypes.string,
-    }),
-};
-
-Card.defaultProps = {
-    card: PropTypes.shape({
-        name: '',
-        image: {},
-        summary: '',
-    }),
+    }).isRequired,
 };
 
 export default Card;

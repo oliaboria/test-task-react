@@ -3,11 +3,11 @@ import React from 'react';
 
 import './_episodes.scss';
 
-import episodeType from '../../types/episode.type';
+import episodeType from '../../../types/episode.type';
 
 import EpisodeList from './episodeList';
 
-const Episodes = ({ episodes, seasonsNumber, showId }) => {
+const Episodes = ({ episodes, seasonsNumber }) => {
     return (
         <>
             {Array(seasonsNumber)
@@ -22,10 +22,7 @@ const Episodes = ({ episodes, seasonsNumber, showId }) => {
                             <h3 className="episodes-title">
                                 Season {numberOfSeason}
                             </h3>
-                            <EpisodeList
-                                episodes={episodes[numberOfSeason]}
-                                showId={showId}
-                            />
+                            <EpisodeList episodes={episodes[numberOfSeason]} />
                         </section>
                     );
                 })}
@@ -38,13 +35,11 @@ Episodes.propTypes = {
         [number]: arrayOf(episodeType),
     }).isRequired,
     seasonsNumber: number.isRequired,
-    showId: number.isRequired,
 };
 
 Episodes.defaultProps = {
     episodes: {},
-    showId: null,
-    seasonsNumber: null,
+    seasonsNumber: 0,
 };
 
 export default Episodes;
