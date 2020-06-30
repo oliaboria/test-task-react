@@ -10,7 +10,7 @@ import {
 } from './show.selectors';
 
 const useAsyncShow = () => {
-    const { id } = useParams();
+    const { showId } = useParams();
     const dispatch = useDispatch();
 
     const show = useSelector(selectShow);
@@ -18,8 +18,8 @@ const useAsyncShow = () => {
     const isShowLoadingFail = useSelector(selectIsShowLoadingFail);
 
     useEffect(() => {
-        dispatch(getShowById(id));
-    }, [id, dispatch]);
+        dispatch(getShowById(showId));
+    }, [showId, dispatch]);
 
     return { show, isShowLoading, isShowLoadingFail };
 };

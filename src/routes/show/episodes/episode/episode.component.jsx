@@ -4,12 +4,12 @@ import { Link, useParams } from 'react-router-dom';
 
 import './_episode.scss';
 
-import { DATE_FORMAT, ROUTES_PATH } from '../../../../constants';
+import { DATE_FORMAT } from '../../../../constants';
 import episodeType from '../../../../types/episode.type';
 
 const Episode = ({ episode }) => {
-    const { number, airdate, name, season } = episode;
-    const { id } = useParams();
+    const { number, airdate, name, season, id } = episode;
+    const { showId } = useParams();
 
     return (
         <tr>
@@ -18,7 +18,7 @@ const Episode = ({ episode }) => {
             <td>
                 <Link
                     to={{
-                        pathname: `${ROUTES_PATH.show}/${id}${ROUTES_PATH.episode}`,
+                        pathname: `/shows/${showId}/episodes/${id}`,
                         search: `?season=${season}&number=${number}`,
                     }}
                     className="episode-link">

@@ -10,7 +10,7 @@ import {
 } from './episodeDetail.selectors';
 
 const useAsyncEpisodeDetail = () => {
-    const { id } = useParams();
+    const { episodeId } = useParams();
     const dispatch = useDispatch();
 
     const episode = useSelector(selectEpisodeDetail);
@@ -18,8 +18,8 @@ const useAsyncEpisodeDetail = () => {
     const isEpisodeLoadingFail = useSelector(selectIsEpisodeDetailLoadingFail);
 
     useEffect(() => {
-        dispatch(getEpisodeDetailById(id));
-    }, [id, dispatch]);
+        dispatch(getEpisodeDetailById(episodeId));
+    }, [episodeId, dispatch]);
 
     return { episode, isEpisodeLoading, isEpisodeLoadingFail };
 };

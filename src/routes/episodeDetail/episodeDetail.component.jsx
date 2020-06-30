@@ -17,6 +17,8 @@ const EpisodeDetail = () => {
 
     const isError = !isEpisodeLoading && isEpisodeLoadingFail;
 
+    console.log(episode);
+
     return (
         <>
             {isEpisodeLoading && <Loader />}
