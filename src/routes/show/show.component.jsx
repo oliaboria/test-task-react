@@ -21,7 +21,7 @@ const Show = () => {
         <>
             {isLoading && <Loader />}
 
-            {!isShowLoading && !isError && (
+            {!isLoading && !isError && (
                 <>
                     <div className="show">
                         <Card card={show} />
