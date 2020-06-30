@@ -8,7 +8,7 @@ import {
 
 export const loadEpisodesAction = (showId) => ({
     type: LOAD_EPISODES,
-    payload: { showId, isLoading: true },
+    payload: { showId, isLoading: true, isError: false },
 });
 
 export const loadEpisodesSuccessAction = (episodes) => ({
@@ -18,7 +18,7 @@ export const loadEpisodesSuccessAction = (episodes) => ({
 
 export const loadEpisodesFailAction = (error) => ({
     type: LOAD_EPISODES_FAIL,
-    payload: { error, isLoading: false },
+    payload: { error, isLoading: false, isError: true },
 });
 
 const getEpisodesByShowId = (showId) => async (dispatch) => {
