@@ -12,7 +12,7 @@ describe('Show reducer', () => {
     beforeEach(() => {
         initialState = {
             id: null,
-            show: null,
+            show: {},
             isLoading: false,
             isError: false,
         };

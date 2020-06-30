@@ -9,7 +9,7 @@ import Show from '../show.component';
 import useAsyncShow from '../show.hooks';
 
 jest.mock('../show.hooks');
-jest.mock('../../../components/episodes/episodes.hooks');
+jest.mock('../episodes/episodes.hooks');
 
 describe('Show', () => {
     it('should render loading state', () => {

@@ -21,7 +21,7 @@ describe('Rewards hooks', () => {
 
     describe('useAsyncShow', () => {
         const mockActionFn = jest.fn();
-        useParams.mockImplementation(() => ({ id: mockShow.id }));
+        useParams.mockImplementation(() => ({ showId: mockShow.id }));
         useDispatch.mockImplementation(() => mockDispatch);
         getShowById.mockImplementation(() => mockActionFn);
         const mockedStore = {
