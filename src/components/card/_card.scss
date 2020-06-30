@@ -1,0 +1,13 @@
+@import '../../assets/style/typography';
+
+.card {
+    &-title {
+        @include h1-heading;
+        margin-bottom: 30px;
+    }
+
+    &-description,
+    &-image {
+        margin-bottom: 15px;
+    }
+}
