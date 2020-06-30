@@ -24,11 +24,7 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
-    card: PropTypes.shape({
-        name: '',
-        image: {},
-        summary: '',
-    }),
+    card: {},
 };
 
 export default Card;

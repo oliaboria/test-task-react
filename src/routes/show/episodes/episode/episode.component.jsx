@@ -1,15 +1,15 @@
 import { format } from 'date-fns';
-import PropTypes from 'prop-types';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 import './_episode.scss';
 
 import { DATE_FORMAT, ROUTES_PATH } from '../../../../constants';
 import episodeType from '../../../../types/episode.type';
 
-const Episode = ({ episode, showId }) => {
+const Episode = ({ episode }) => {
     const { number, airdate, name, season } = episode;
+    const { id } = useParams();
 
     return (
         <tr>
@@ -18,7 +18,7 @@ const Episode = ({ episode, showId }) => {
             <td>
                 <Link
                     to={{
-                        pathname: `${ROUTES_PATH.show}/${showId}${ROUTES_PATH.episode}`,
+                        pathname: `${ROUTES_PATH.show}/${id}${ROUTES_PATH.episode}`,
                         search: `?season=${season}&number=${number}`,
                     }}
                     className="episode-link">
@@ -31,7 +31,6 @@ const Episode = ({ episode, showId }) => {
 
 Episode.propTypes = {
     episode: episodeType.isRequired,
-    showId: PropTypes.number.isRequired,
 };
 
 export default Episode;

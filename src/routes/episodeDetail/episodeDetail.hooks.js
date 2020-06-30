@@ -15,13 +15,13 @@ const useAsyncEpisodeDetail = () => {
 
     const episode = useSelector(selectEpisodeDetail);
     const isEpisodeLoading = useSelector(selectIsEpisodeDetailLoading);
-    const isError = useSelector(selectIsEpisodeDetailLoadingFail);
+    const isEpisodeLoadingFail = useSelector(selectIsEpisodeDetailLoadingFail);
 
     useEffect(() => {
         dispatch(getEpisodeDetailById(id));
     }, [id, dispatch]);
 
-    return { episode, isEpisodeLoading, isError };
+    return { episode, isEpisodeLoading, isEpisodeLoadingFail };
 };
 
 export default useAsyncEpisodeDetail;

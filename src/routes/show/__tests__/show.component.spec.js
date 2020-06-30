@@ -2,9 +2,9 @@ import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import React from 'react';
 
-import useAsyncEpisodes from '../../../components/episodes/episodes.hooks';
-import Error from '../../../components/error';
+import ErrorMessage from '../../../components/errorMessage';
 import Loader from '../../../components/loader';
+import useAsyncEpisodes from '../episodes/episodes.hooks';
 import Show from '../show.component';
 import useAsyncShow from '../show.hooks';
 
@@ -43,7 +43,7 @@ describe('Show', () => {
         }));
 
         const wrapper = shallow(<Show />);
-        expect(wrapper.find(Error)).toHaveLength(1);
+        expect(wrapper.find(ErrorMessage)).toHaveLength(1);
     });
 
     it('should render card component', () => {
