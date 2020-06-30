@@ -1,0 +1,6 @@
+@import '../../assets/style/typography';
+
+.error-header {
+    @include h2-heading;
+    padding-top: 10px;
+}

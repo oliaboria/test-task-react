@@ -4,6 +4,12 @@
     line-height: 44px;
 }
 
+@mixin h2-heading {
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 35px;
+}
+
 @mixin h3-heading {
     font-weight: bold;
     font-size: 30px;

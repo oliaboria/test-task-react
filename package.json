@@ -25,6 +25,7 @@
         "lint:style": "stylelint \"./**/*.{css,scss}\"",
         "format": "prettier --write \"./**/*.*\""
     },
+    "homepage": "./",
     "eslintConfig": {
         "extends": "react-app"
     },
