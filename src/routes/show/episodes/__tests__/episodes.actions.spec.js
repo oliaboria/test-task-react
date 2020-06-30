@@ -3,14 +3,13 @@ import thunk from 'redux-thunk';
 
 import { fetchEpisodeList } from '../../../../api';
 import mockEpisodes from '../../../../mocks/episodes';
+import { mockShowId } from '../../../../mocks/show';
 import * as actions from '../episodes.actions';
 import * as actionTypes from '../episodes.actionTypes';
 
 jest.mock('../../../../api', () => ({
     fetchEpisodeList: jest.fn(async () => mockEpisodes),
 }));
-
-const mockShowId = 111;
 
 describe('Episodes actions', () => {
     afterEach(() => {

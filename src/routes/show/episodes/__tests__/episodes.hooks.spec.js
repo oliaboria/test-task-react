@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
 import { mockEpisodes, mockEpisodesBySeason } from '../../../../mocks/episodes';
+import { mockShowId } from '../../../../mocks/show';
 import getEpisodesByShowId from '../episodes.actions';
 import useAsyncEpisodes from '../episodes.hooks';
 
@@ -13,7 +14,6 @@ jest.mock('react-router-dom', () => ({
 jest.mock('../episodes.actions', () => jest.fn(() => mockEpisodes));
 
 const mockDispatch = jest.fn();
-const mockShowId = 111;
 
 describe('Episodes hooks', () => {
     afterEach(() => {
