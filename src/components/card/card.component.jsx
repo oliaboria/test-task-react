@@ -20,11 +20,7 @@ Card.propTypes = {
         name: PropTypes.string,
         image: PropTypes.shape({}),
         summary: PropTypes.string,
-    }),
-};
-
-Card.defaultProps = {
-    card: {},
+    }).isRequired,
 };
 
 export default Card;
