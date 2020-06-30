@@ -3,7 +3,7 @@ import React from 'react';
 
 import './_episodes.scss';
 
-import episodeType from '../../types/episode.type';
+import episodeType from '../../../types/episode.type';
 
 import EpisodeList from './episodeList';
 

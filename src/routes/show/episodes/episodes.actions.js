@@ -1,4 +1,4 @@
-import { fetchEpisodeList } from '../../api';
+import { fetchEpisodeList } from '../../../api';
 
 import {
     LOAD_EPISODES,

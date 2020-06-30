@@ -3,11 +3,11 @@ import React from 'react';
 import './_show.scss';
 
 import Card from '../../components/card';
-import Episodes from '../../components/episodes';
-import useAsyncEpisodes from '../../components/episodes/episodes.hooks';
 import Error from '../../components/error';
 import Loader from '../../components/loader';
 
+import Episodes from './episodes';
+import useAsyncEpisodes from './episodes/episodes.hooks';
 import useAsyncShow from './show.hooks';
 
 const Show = () => {

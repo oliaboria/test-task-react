@@ -3,9 +3,8 @@ import React from 'react';
 
 import './_episodeList.scss';
 
-import episodeType from '../../../types/episode.type';
-
-import Episode from './episode';
+import episodeType from '../../../../types/episode.type';
+import Episode from '../episode';
 
 const EpisodeList = ({ episodes, showId }) => {
     return (
