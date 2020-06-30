@@ -11,6 +11,7 @@ const initialState = {
     episodesBySeason: {},
     seasonsNumber: 0,
     isLoading: false,
+    isError: false,
 };
 
 function episodesReducer(state = initialState, action) {

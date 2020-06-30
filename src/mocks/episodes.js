@@ -1,4 +1,4 @@
-export default [
+export const mockEpisodes = [
     {
         airdate: '2016-04-04',
         airstamp: '2016-04-04T22:00:00+00:00',
@@ -40,3 +40,9 @@ export default [
             'http://www.tvmaze.com/episodes/657308/the-powerpuff-girls-1x01-escape-from-monster-island',
     },
 ];
+
+export const mockEpisodesBySeason = {
+    '1': mockEpisodes,
+};
+
+export default mockEpisodes;

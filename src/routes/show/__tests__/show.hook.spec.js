@@ -14,7 +14,7 @@ jest.mock('../show.actions', () => jest.fn(() => mockShow));
 
 const mockDispatch = jest.fn();
 
-describe('Rewards hooks', () => {
+describe('Show hooks', () => {
     afterEach(() => {
         jest.clearAllMocks();
     });
