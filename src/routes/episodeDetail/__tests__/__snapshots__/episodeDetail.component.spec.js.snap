@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Episode Detail page should render card component 1`] = `
+<Fragment>
+  <div
+    className="episode-detail"
+  >
+    <Card
+      card={
+        Object {
+          "_links": Object {
+            "self": Object {
+              "href": "http://api.tvmaze.com/episodes/657309",
+            },
+          },
+          "airdate": "2016-04-04",
+          "airstamp": "2016-04-04T22:00:00+00:00",
+          "airtime": "18:00",
+          "id": 657309,
+          "image": Object {
+            "medium": "http://static.tvmaze.com/uploads/images/medium_landscape/53/132618.jpg",
+            "original": "http://static.tvmaze.com/uploads/images/original_untouched/53/132618.jpg",
+          },
+          "name": "Princess Buttercup",
+          "number": 2,
+          "runtime": 15,
+          "season": 1,
+          "summary": "<p>Buttercup becomes enamored with a team of roller derby girls called the Derbytantes. When she starts spending all of her time with them, Princess Morbucks seeks to be her replacement in the Powerpuff Girls.</p>",
+          "url": "http://www.tvmaze.com/episodes/657309/the-powerpuff-girls-1x02-princess-buttercup",
+        }
+      }
+    />
+  </div>
+</Fragment>
+`;

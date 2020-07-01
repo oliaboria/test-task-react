@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component should render card component with fallback image 1`] = `
+<Fragment>
+  <h1
+    className="card-title"
+  >
+    The Powerpuff Girls
+  </h1>
+  <div
+    className="clearfix"
+  >
+    <figure
+      className="card-image left-column"
+    >
+      <img
+        alt="Cover"
+        src="no-img.png"
+      />
+    </figure>
+    <div
+      className="card-description right-column"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p>The city of Townsville may be a beautiful, bustling metropolis, but don't be fooled! There's evil afoot! And only three things can keep the bad guys at bay: Blossom, Bubbles and Buttercup, three super-powered little girls, known to their fans (and villains everywhere) as <b>The Powerpuff Girls</b>. Juggling school, bedtimes, and beating up giant monsters may be daunting, but together the Powerpuff Girls are up to the task. Battling a who's who of evil, they show what it really means to \\"fight like a girl.\\"</p>",
+        }
+      }
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`Card component should render card component with image 1`] = `
+<Fragment>
+  <h1
+    className="card-title"
+  >
+    The Powerpuff Girls
+  </h1>
+  <div
+    className="clearfix"
+  >
+    <figure
+      className="card-image left-column"
+    >
+      <img
+        alt="Cover"
+        src="http://static.tvmaze.com/uploads/images/medium_portrait/60/151357.jpg"
+      />
+    </figure>
+    <div
+      className="card-description right-column"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p>The city of Townsville may be a beautiful, bustling metropolis, but don't be fooled! There's evil afoot! And only three things can keep the bad guys at bay: Blossom, Bubbles and Buttercup, three super-powered little girls, known to their fans (and villains everywhere) as <b>The Powerpuff Girls</b>. Juggling school, bedtimes, and beating up giant monsters may be daunting, but together the Powerpuff Girls are up to the task. Battling a who's who of evil, they show what it really means to \\"fight like a girl.\\"</p>",
+        }
+      }
+    />
+  </div>
+</Fragment>
+`;

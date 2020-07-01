@@ -57,5 +57,13 @@
                 "extensions": [".js", ".jsx"]
             }
         }
-    }
+    },
+    "overrides": [
+        {
+            "files": ["*.spec.js"],
+            "rules": {
+                "react/display-name": 0
+            }
+        }
+    ]
 }

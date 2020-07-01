@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Episode component should render episode 1`] = `
+<tr>
+  <td>
+    1
+  </td>
+  <td>
+    Apr 04, 2016
+  </td>
+  <td>
+    <Link
+      className="episode-link"
+      to={
+        Object {
+          "pathname": "/shows/111/episodes/657308",
+          "search": "?season=1&number=1",
+        }
+      }
+    >
+      Escape from Monster Island
+    </Link>
+  </td>
+</tr>
+`;

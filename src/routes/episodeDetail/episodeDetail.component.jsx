@@ -15,17 +15,15 @@ const EpisodeDetail = () => {
         isEpisodeLoadingFail,
     } = useAsyncEpisodeDetail();
 
-    const isError = !isEpisodeLoading && isEpisodeLoadingFail;
-
-    console.log(episode);
+    const isRender = !isEpisodeLoading && !isEpisodeLoadingFail;
 
     return (
         <>
             {isEpisodeLoading && <Loader />}
 
-            {isError && <ErrorMessage />}
+            {isEpisodeLoadingFail && <ErrorMessage />}
 
-            {!isEpisodeLoading && (
+            {isRender && (
                 <div className="episode-detail">
                     <Card card={episode} />
                 </div>
