@@ -1,11 +1,10 @@
-import { API_SHOWS_PATH, API_EPISODES_PATH } from '../constants';
-import request from '../utils/request';
-
-import * as api from './api';
+import { API_SHOWS_PATH, API_EPISODES_PATH } from '../../constants';
+import request from '../../utils/request';
+import * as api from '../api';
 
 const mockResponse = { data: true };
 
-jest.mock('../utils/request', () =>
+jest.mock('../../utils/request', () =>
     jest.fn(() => Promise.resolve(mockResponse)),
 );
 
