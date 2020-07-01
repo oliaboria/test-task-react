@@ -1,5 +1,5 @@
-import { API_SHOWS_PATH, API_EPISODES_PATH } from './constants';
-import request from './utils/request';
+import { API_SHOWS_PATH, API_EPISODES_PATH } from '../constants';
+import request from '../utils/request';
 
 export const fetchShowById = async (showId) =>
     request(`${API_SHOWS_PATH}/${showId}`);
