@@ -11,7 +11,7 @@
         "react-dom": "^16.13.1",
         "react-redux": "^7.2.0",
         "react-router-dom": "^5.2.0",
-        "react-scripts": "3.4.1",
+        "react-scripts": "3.4.0",
         "redux": "^4.0.5",
         "redux-devtools-extension": "^2.13.8",
         "redux-thunk": "^2.3.0"
@@ -20,12 +20,23 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
+        "test:coverage": "react-scripts test --coverage --watchAll=false",
         "eject": "react-scripts eject",
         "lint": "eslint \"./**/*.{js,jsx}\"",
         "lint:style": "stylelint \"./**/*.{css,scss}\"",
         "format": "prettier --write \"./**/*.*\""
     },
     "homepage": "./",
+    "jest": {
+        "collectCoverageFrom": [
+            "src/**/*.{js,jsx}",
+            "!/node_modules/",
+            "!src/index.js",
+            "!src/serviceWorker.js",
+            "!src/routes/routes.js",
+            "!src/store/store.js"
+        ]
+    },
     "eslintConfig": {
         "extends": "react-app"
     },
@@ -56,6 +67,7 @@
         "eslint-plugin-prettier": "^3.1.4",
         "eslint-plugin-react": "^7.20.0",
         "husky": "^4.2.5",
+        "jest-fetch-mock": "^3.0.3",
         "lint-staged": "^10.2.11",
         "prettier": "2.0.5",
         "react-test-renderer": "^16.13.1",
@@ -66,7 +78,8 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged"
+            "pre-commit": "lint-staged",
+            "pre-push": "yarn test:coverage"
         }
     },
     "lint-staged": {

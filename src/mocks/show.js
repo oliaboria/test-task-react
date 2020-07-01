@@ -1,4 +1,4 @@
-export default {
+const mockShow = {
     id: 6771,
     url: 'http://www.tvmaze.com/shows/6771/the-powerpuff-girls',
     name: 'The Powerpuff Girls',
@@ -38,3 +38,7 @@ export default {
         previousepisode: { href: 'http://api.tvmaze.com/episodes/1662010' },
     },
 };
+
+export default mockShow;
+
+export const mockShowId = mockShow.id;

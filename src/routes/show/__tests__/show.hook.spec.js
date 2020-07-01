@@ -14,14 +14,14 @@ jest.mock('../show.actions', () => jest.fn(() => mockShow));
 
 const mockDispatch = jest.fn();
 
-describe('Rewards hooks', () => {
+describe('Show hooks', () => {
     afterEach(() => {
         jest.clearAllMocks();
     });
 
     describe('useAsyncShow', () => {
         const mockActionFn = jest.fn();
-        useParams.mockImplementation(() => ({ id: mockShow.id }));
+        useParams.mockImplementation(() => ({ showId: mockShow.id }));
         useDispatch.mockImplementation(() => mockDispatch);
         getShowById.mockImplementation(() => mockActionFn);
         const mockedStore = {

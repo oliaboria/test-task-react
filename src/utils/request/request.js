@@ -8,7 +8,7 @@ const request = async (path, options) => {
         const isOk = resp.status >= 200 && resp.status <= 299;
 
         if (!isOk) {
-            throw new Error(responseBody);
+            throw new Error(resp);
         }
 
         return responseBody;

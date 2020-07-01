@@ -9,6 +9,10 @@ exports[`Show should render card component 1`] = `
       card={Object {}}
     />
   </div>
+  <Episodes
+    episodes={Object {}}
+    seasonsNumber={0}
+  />
 </Fragment>
 `;
 
@@ -36,7 +40,6 @@ exports[`Show should render card with seasons list 1`] = `
       }
     }
     seasonsNumber={1}
-    showId={111}
   />
 </Fragment>
 `;
